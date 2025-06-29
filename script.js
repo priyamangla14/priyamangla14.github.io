@@ -54,8 +54,14 @@ class SmoothScroller {
     init() {
         this.navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
                 const targetId = link.getAttribute('href');
+                
+                // Don't prevent default for external links (like PDF)
+                if (targetId.startsWith('http') || targetId.endsWith('.pdf')) {
+                    return; // Let the link work normally
+                }
+                
+                e.preventDefault();
                 const targetSection = document.querySelector(targetId);
                 
                 if (targetSection) {

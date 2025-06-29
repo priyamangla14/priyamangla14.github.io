@@ -1,11 +1,11 @@
 # Priya Mangla - Portfolio Website
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript. This website is inspired by Sahil Arora's design but customized for Priya Mangla.
+A modern, responsive portfolio website built with HTML, CSS, and JavaScript. This website showcases Priya Mangla's professional background as a System Engineer with expertise in customer service, team management, and operational excellence.
 
 ## 🌟 Features
 
 ### Design & User Experience
-- **Modern & Clean Design**: Inspired by Sahil Arora's portfolio with a professional look
+- **Modern & Clean Design**: Professional portfolio design with a clean, modern aesthetic
 - **Responsive Layout**: Fully responsive design that works on all devices
 - **Dark/Light Theme**: Toggle between dark and light themes with persistent preference
 - **Smooth Animations**: Subtle animations and transitions for better user experience
@@ -13,10 +13,10 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 
 ### Sections
 - **Hero Section**: Eye-catching introduction with call-to-action buttons
-- **About Me**: Personal introduction and background information
-- **Blog**: Showcase of blog posts with categories and dates
-- **Projects**: Portfolio of projects with technology tags and links
-- **Resume**: Professional experience, education, and skills
+- **About Me**: Personal introduction and professional background
+- **Blog**: Showcase of technical articles and insights
+- **Projects**: Portfolio of system engineering and leadership projects
+- **Resume**: Professional experience, education, and skills (with PDF download)
 - **Footer**: Social links and contact information
 
 ### Technical Features
@@ -26,6 +26,7 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 - **Local Storage**: Theme preference persistence
 - **Mobile-First**: Responsive design with mobile menu
 - **Performance Optimized**: Fast loading with optimized assets
+- **PDF Integration**: Direct link to downloadable resume
 
 ## 🚀 Getting Started
 
@@ -44,6 +45,7 @@ priyamangla14.github.io/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles and theming
 ├── script.js           # JavaScript functionality
+├── PriyaResume.pdf     # Downloadable resume
 └── README.md           # This documentation
 ```
 
@@ -109,6 +111,7 @@ The website is fully responsive with breakpoints at:
 ### Smooth Scrolling
 - Navigation links scroll smoothly to sections
 - Accounts for fixed header height
+- PDF links open in new tabs
 
 ### Animations
 - Intersection Observer for scroll-triggered animations
@@ -163,8 +166,8 @@ Add new projects by duplicating the project card structure:
             <span class="tech-tag">Technology</span>
         </div>
         <div class="project-links">
-            <a href="#" class="project-link">View Project</a>
-            <a href="#" class="project-link">GitHub</a>
+            <a href="#" class="project-link">View Details</a>
+            <a href="#" class="project-link">Documentation</a>
         </div>
     </div>
 </div>
@@ -195,9 +198,10 @@ Feel free to fork this project and customize it for your own portfolio. If you f
 ## 📞 Contact
 
 For questions or support, please reach out to:
-- Email: priya.mangla@example.com
-- GitHub: [Your GitHub Profile]
+- Email: manglapriya14@gmail.com
+- LinkedIn: [Priya Mangla](https://linkedin.com/in/priyamangla14)
+- Phone: +1 (206) 218-4713
 
 ---
 
-**Note**: This website is inspired by [Sahil Arora's portfolio](https://sahilarora.in/) but has been completely customized for Priya Mangla with original code and design elements. 
+**About Priya Mangla**: A dynamic System Engineer with over 2.5 years of experience at Tata Consultancy Services, specializing in customer service, team management, and operational excellence. Currently based in the United States, Priya has successfully resolved over 300 customer issues in Lenel badging systems and visitor management systems, while leading agile teams and establishing effective communication channels between development teams and leadership.
