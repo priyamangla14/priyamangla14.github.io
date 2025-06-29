@@ -558,4 +558,89 @@ html {
 
 .section {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Blog content styles for expanded articles */
+.blog-content {
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.blog-content h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.blog-content ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-content p {
+    margin-bottom: 1rem;
+}
+
+/* Project details styles for expanded project information */
+.project-details {
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.project-details h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.project-details ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+}
+
+.project-details li {
+    margin-bottom: 0.5rem;
+}
+
+.project-details p {
+    margin-bottom: 1rem;
+}
+
+/* Enhanced blog and project cards for separate pages */
+.blog-card.expanded,
+.project-card.expanded {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-card.expanded .blog-title,
+.project-card.expanded .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments for expanded content */
+@media (max-width: 768px) {
+    .blog-content,
+    .project-details {
+        font-size: 0.95rem;
+    }
+    
+    .blog-card.expanded,
+    .project-card.expanded {
+        padding: 1.5rem;
+    }
+    
+    .blog-card.expanded .blog-title,
+    .project-card.expanded .project-title {
+        font-size: 1.3rem;
+    }
 } 

@@ -2,7 +2,7 @@
 class ThemeManager {
     constructor() {
         this.themeToggle = document.getElementById('theme-toggle');
-        this.currentTheme = localStorage.getItem('theme') || 'light';
+        this.currentTheme = localStorage.getItem('theme') || 'dark';
         this.init();
     }
 
@@ -56,8 +56,8 @@ class SmoothScroller {
             link.addEventListener('click', (e) => {
                 const targetId = link.getAttribute('href');
                 
-                // Don't prevent default for external links (like PDF)
-                if (targetId.startsWith('http') || targetId.endsWith('.pdf')) {
+                // Don't prevent default for external links (like PDF) or HTML pages
+                if (targetId.startsWith('http') || targetId.endsWith('.pdf') || targetId.includes('.html')) {
                     return; // Let the link work normally
                 }
                 
