@@ -128,15 +128,38 @@ body {
     min-height: calc(100vh - 200px);
 }
 
-/* Hero section */
-.hero {
-    padding: 4rem 0;
-    text-align: center;
+/* Hero section with image on the right */
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    flex: 1 1 350px;
+    min-width: 300px;
+}
+
+.hero-image-wrapper {
+    flex: 0 0 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    max-width: 350px;
+}
+
+.hero-image {
+    width: 160px;
+    max-width: 160px;
+    height: auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    object-fit: cover;
+    background: none;
+    border: none;
+    border-radius: 0;
 }
 
 .hero-title {
@@ -175,12 +198,15 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-color);
+    background-color: var(--bg-secondary);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
@@ -188,13 +214,16 @@ body {
 .btn-secondary {
     background-color: transparent;
     color: var(--text-primary);
-    border-color: var(--border-color);
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
     background-color: var(--bg-secondary);
     border-color: var(--accent-color);
     color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 /* Section styles */
@@ -530,6 +559,21 @@ body {
     }
 }
 
+@media (max-width: 900px) {
+    .hero-flex {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .hero-image-wrapper {
+        margin-top: 1.5rem;
+        max-width: 220px;
+    }
+    .hero-content {
+        text-align: center;
+    }
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
@@ -642,5 +686,15 @@ html {
     .blog-card.expanded .blog-title,
     .project-card.expanded .project-title {
         font-size: 1.3rem;
+    }
+}
+
+.hero {
+    padding: 6rem 0 5rem 0;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 4rem 0 3rem 0;
     }
 } 

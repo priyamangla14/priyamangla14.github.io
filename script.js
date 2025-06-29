@@ -119,23 +119,29 @@ class TypingEffect {
         this.init();
     }
 
+    // Helper to type out HTML content, not just plain text
+    typeHtml(element, html, i = 0) {
+        // If we've reached the end, stop
+        if (i >= html.length) return;
+        // If next char is a tag, add the whole tag at once
+        if (html[i] === '<') {
+            const closeIdx = html.indexOf('>', i);
+            if (closeIdx !== -1) {
+                element.innerHTML += html.slice(i, closeIdx + 1);
+                this.typeHtml(element, html, closeIdx + 1);
+                return;
+            }
+        }
+        // Otherwise, add one character
+        element.innerHTML += html[i];
+        setTimeout(() => this.typeHtml(element, html, i + 1), 50);
+    }
+
     init() {
         if (!this.heroTitle) return;
-        
-        const text = this.heroTitle.innerHTML;
+        const html = this.heroTitle.innerHTML;
         this.heroTitle.innerHTML = '';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                this.heroTitle.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        };
-        
-        // Start typing effect after a short delay
-        setTimeout(typeWriter, 500);
+        setTimeout(() => this.typeHtml(this.heroTitle, html, 0), 500);
     }
 }
 
